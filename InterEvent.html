@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Interested Events</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top" style="background-color:#ECF0F1;">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display............................................................ -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+              </button>
+                <a class="navbar-brand page-scroll" href="#page-top" style="color:red;">EventX</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling................................................................ -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="index.html" style="color:black;"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li>
+                        <a id="profilebtn" href="Profile.html" style="color:black;"><i class="fa fa-user fa-2x" aria-hidden="true"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a id="signout" href="" style="color:black;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> Logout</a>
+                    </li>
+                    <li style="padding-top: 10px">
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown"><i class="fa fa-bell-o" aria-hidden="true" id='menu3'></i>
+                                    <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu2" id='menu2_add'>
+
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li style="padding-top: 10px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Events
+                          <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=All">All</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Technology">Technology</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Health">Health</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Art and Culture">Art and Culture</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Workshop">Workshop</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Sports">Sports</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Other">Other</a></li>
+                                <li role="presentation" class="div1 divider"></li>
+                                <li role="presentation" class="intere"><a role="menuitem" tabindex="-1" href="InterEvent.html"><i class="fa fa-heart" aria-hidden="true"></i> Interested Events</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse..................................................................................... -->
+        </div>
+        <!-- /.container-fluid............................................................................................. -->
+    </nav>
+
+
+    <br/><br/>
+    <!--Events starts-->
+    <br/><br/>
+    <div style="margin:20px;">
+        <div align="center">
+          <h1>Interested Events</h1><hr/>
+        </div>
+        <div class="row">
+
+
+            <div class="col-md-12">
+
+                <br/><br/>
+
+
+                <div id="eventrow" class="row">
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--Events Ends-->
+    <hr/>
+    <section id="contact">
+        <div class="container">
+          <div class="row text-center">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h2 class="section-heading">Let's Get In Touch!</h2>
+                  <hr class="primary">
+                  <p>Ready to start your next Event with us? That's great! Send us an email and we will get back to you as soon as possible!</p>
+              </div>
+              <div class="col-lg-6 text-center">
+                  <i class="fa fa-android fa-3x sr-contact"></i>
+                  <p><a href="https://play.google.com/store/apps/details?id=com.eventx.eventx" target="_blank"></i> Download Android app</a></p>
+              </div>
+              <div class="col-lg-6 text-center">
+                  <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                  <p><a href="mailto:EventX.team2017@gmail.com" target="_blank">EventX.team2017@gmail.com</a></p>
+              </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+    <!--Firebase database...............................................................................................-->
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+    <script type="text/javascript">
+        var config = {
+            apiKey: "AIzaSyAWv1atoxBXETvRJL_Oqd7YbimX-48cH0E",
+            authDomain: "eventx-77033.firebaseapp.com",
+            databaseURL: "https://eventx-77033.firebaseio.com",
+            storageBucket: "eventx-77033.appspot.com",
+            messagingSenderId: "503298611209"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <!--JS/index1.js file linking.................................................................................................................-->
+    <script src="js/InterEvent.js"></script>
+
+
+
+</body>
+
+</html>

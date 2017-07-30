@@ -1,0 +1,465 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Event</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS -->
+  <link href="css/creative.min.css" rel="stylesheet">
+
+  <!-- Theme CSS -->
+  <link href="css/style1.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style_comm.css">
+
+
+
+  <style>
+    .image {
+      position: relative;
+      width: 100%;
+      /* for IE 6 */
+    }
+
+    .text {
+      position: absolute;
+      top: 100px;
+      width: 100%;
+      color: black;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body id="page-top" style="background-color:#ECF0F1;">
+
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display............................................................ -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+              </button>
+        <a class="navbar-brand page-scroll" href="#page-top" style="color:red;">EventX</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling................................................................ -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="index.html" style="color:black;"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a>
+          </li>
+          <li>
+            <a id="profilebtn" href="Profile.html" style="color:black;"><i class="fa fa-user fa-2x" aria-hidden="true"></i> Profile</a>
+          </li>
+          <li>
+            <a id="Loginsignup" href="Login.html" style="color:black;"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i> Login/SignUp</a>
+          </li>
+          <li>
+            <a id="signout" href="" style="color:black;"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> Logout</a>
+          </li>
+          <li style="padding-top: 10px">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown"><i class="fa fa-bell-o" aria-hidden="true" id='menu3'></i>
+                          <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu2" id='menu2_add'>
+
+              </ul>
+            </div>
+          </li>
+
+          <li style="padding-top: 10px">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Events
+                          <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=All">All</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Technical">Technical</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Management">Management</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Cultural">Cultural</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Workshop">Workshop</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Sports">Sports</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="DisplayEvents.html?category=Other">Other</a></li>
+                <li role='presentation' class='div1 divider'></li>
+                <li role="presentation" class="intere"><a role="menuitem" tabindex="-1" href="InterEvent.html"><i class="fa fa-heart" aria-hidden="true"></i> Interested Events</a></li>
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse..................................................................................... -->
+    </div>
+    <!-- /.container-fluid............................................................................................. -->
+  </nav>
+
+  <!--Event..........................................................................................................................-->
+  <div class="image">
+    <img src="" id="eventimg" style="width:100%;height:375px;opacity:0.4;">
+
+    <div id="eventdetails" class="text" align="center">
+
+
+    </div>
+
+  </div>
+
+  <!--Event post Form....................................................................................................................-->
+  <div class="modal" id="themoda">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <div>
+            <button class="close" data-dismiss="modal">&times;</button>
+            <div id="post_succ"></div>
+          </div>
+          <div class="ff" style="padding-top:30px">
+            <!--Form Filed-->
+
+            <div class="form">
+
+
+
+              <h1 align="center">Edit Event Post</h1>
+              <hr/>
+
+              <form action="#" method="post" id="eform" enctype="multipart/form-data">
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event pic!">
+                  <input type="file" id="Imagepicker" name='epic' multiple accept="image/*" style="display:none" onchange="changepic()">
+                  <label for="Imagepicker"><img src="img/cover.jpeg" id="imgdisplay" style="width:100%;height:200px"></label>
+
+                </div>
+
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event name!">
+
+                  <input type="text" name="ename" id="ename" placeholder="Enter the name of event" autocomplete="off" />
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event type!">
+
+                  <!--<input list="typeofevent" name="etype" placeholder="Type of event" id="etype" />
+                                          <datalist id="typeofevent">
+                                                                        <option value="Workshop">Workshop</option>
+                                                                        <option value="Technology">Technology</option>
+                                                                        <option value="Art and Culture">Art and Culture</option>
+                                                                        <option value="Sports">Sports</option>
+                                                                        <option value="Health">Health</option>
+                                                                        <option value="Other">Other</option>
+
+                                                                    </datalist>-->
+
+                  <select name="etype" placeholder="Type of event" id="etype">
+                                            <option value="">Select event category</option>
+                                            <option value="Workshop">Workshop</option>
+                                            <option value="Technology">Technology</option>
+                                            <option value="Art and Culture">Art and Culture</option>
+                                            <option value="Sports">Sports</option>
+                                            <option value="Health">Health</option>
+                                            <option value="Other">Other</option>
+
+                                          </select>
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event Starting Date!">
+
+                  <input type="date" name="esdate" id="esdate" placeholder="Event starting date" autocomplete="off" />
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event Ending Date!">
+
+                  <input type="date" id="eedate" name="eedate" placeholder="Event ending date" autocomplete="off" />
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event Starting Time!">
+
+                  <input type="time" name="estime" id="estime" placeholder="Event starting time" autocomplete="off" />
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event Ending Time!">
+
+                  <input type="time" name="eetime" id="eetime" placeholder="Event ending time" autocomplete="off" />
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Event venue!">
+
+                  <input type="text" name="evenue" id="evenue" placeholder="Venue" autocomplete="off" />
+                </div>
+
+                <!--<div class="field-wrap">
+
+                                          <input list="states" name="estate" placeholder="Select state" id="estate" />
+                                          <datalist id="states">
+                                                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                                    <option value="Assam">Assam</option>
+                                                                    <option value="Bihar">Bihar</option>
+                                                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                                                    <option value="Delhi">Delhi</option>
+                                                                    <option value="Goa">Goa</option>
+                                                                    <option value="Gujarat">Gujarat</option>
+                                                                    <option value="Haryana">Haryana</option>
+                                                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                                                                    <option value="Jharkhand">Jharkhand</option>
+                                                                    <option value="Karnataka">Karnataka</option>
+                                                                    <option value="Kerala">Kerala</option>
+                                                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                                    <option value="Maharashtra">Maharashtra</option>
+                                                                    <option value="Manipur">Manipur</option>
+                                                                    <option value="Meghalaya">Meghalaya</option>
+                                                                    <option value="Mizoram">Mizoram</option>
+                                                                    <option value="Nagaland">Nagaland</option>
+                                                                    <option value="Odisha">Odisha</option>
+                                                                    <option value="Punjab">Punjab</option>
+                                                                    <option value="Rajasthan">Rajasthan</option>
+                                                                    <option value="Sikkim">Sikkim</option>
+                                                                    <option value="amil Nadu">amil Nadu</option>
+                                                                    <option value="Telangana">Telangana</option>
+                                                                    <option value="Tripura">Tripura</option>
+                                                                    <option value="Uttarakhand">Uttarakhand</option>
+                                                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                                    <option value="West Bengal">West Bengal</option>
+
+                                                                </datalist>
+                                      </div>-->
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change State!">
+                  <select name="estate" id="estate">
+                                          <option value="">Select state</option>
+                                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                          <option value="Assam">Assam</option>
+                                          <option value="Bihar">Bihar</option>
+                                          <option value="Chhattisgarh">Chhattisgarh</option>
+                                          <option value="Delhi">Delhi</option>
+                                          <option value="Goa">Goa</option>
+                                          <option value="Gujarat">Gujarat</option>
+                                          <option value="Haryana">Haryana</option>
+                                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                          <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                                          <option value="Jharkhand">Jharkhand</option>
+                                          <option value="Karnataka">Karnataka</option>
+                                          <option value="Kerala">Kerala</option>
+                                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                          <option value="Maharashtra">Maharashtra</option>
+                                          <option value="Manipur">Manipur</option>
+                                          <option value="Meghalaya">Meghalaya</option>
+                                          <option value="Mizoram">Mizoram</option>
+                                          <option value="Nagaland">Nagaland</option>
+                                          <option value="Odisha">Odisha</option>
+                                          <option value="Punjab">Punjab</option>
+                                          <option value="Rajasthan">Rajasthan</option>
+                                          <option value="Sikkim">Sikkim</option>
+                                          <option value="Tamil Nadu">Tamil Nadu</option>
+                                          <option value="Telangana">Telangana</option>
+                                          <option value="Tripura">Tripura</option>
+                                          <option value="Uttarakhand">Uttarakhand</option>
+                                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                          <option value="West Bengal">West Bengal</option>
+
+
+                                        </select>
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Host name!">
+
+                    <input type="text" name="o_name" id="o_name" placeholder="Host name" autocomplete="off" />
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Host email!">
+
+                    <input type="email" name="o_email" id="o_email" placeholder="Change Host email" autocomplete="off" />
+                </div>
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Host phone no.!">
+
+                    <input type="tel" maxlength="12" name="o_phone" id="o_phone" placeholder="Change Host phone no." autocomplete="off" />
+                </div>
+
+
+                <div class="field-wrap" data-toggle="tooltip" data-placement="top" title="Change Description!">
+                  <textarea name="edescription" rows="5" id="edescription" placeholder="Change Description"></textarea>
+                </div>
+
+                <button type="submit" class="button button-block" />Post</button>
+
+              </form>
+
+            </div>
+            <!--/form -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--Description and venue...................................................................................................-->
+  <br/>
+  <div class="row" style="margin:10px;">
+    <div class="col-md-8 col-lg-8 well well-sm">
+      <h1>Description:</h1>
+      <br/>
+      <div id="desc" style="margin-left:5%;">
+
+      </div>
+      <hr/>
+      <h1>Venue:</h1>
+      <br/>
+      <div style="margin-left:5%;">
+
+        <p id="venue1"></p>
+      </div>
+      <hr/>
+      <h1>Contact Host:</h1>
+      <br/>
+      <div id="h_detl" style="margin-left:5%;">
+
+      </div>
+      <br/>
+    </div>
+    <div class="col-md-4 col-lg-4 well well-sm">
+      <iframe id="iframe_map" width="100%" height="500px" src="" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="text-center hidden-md hidden-lg">
+      <a href="" id="map" class="btn btn-success" target="_blank"><i class="fa fa-map" aria-hidden="true"></i> See location on app</a>
+    </div>
+    <br/>
+  </div>
+  <div class="text-center">
+    <a href="" target="_blank" id="fb_share" class="btn well well-sm" >
+      <i class="fa fa-facebook fa-2x" aria-hidden="true" style='color:#3b5998'></i>
+    </a>
+  </div>
+
+  <!--Comeent box..............................................................................................................-->
+  <div id='comm'>
+    <div class="col-md-8 offset-md-3" style="margin-bottom:5%;">
+      <h3 style="margin-bottom:1em;"> Comment Box</h3>
+      <div class="card paper">
+        <details>
+          <summary style="padding:1em;" id="comm_show"> comments</summary>
+          <ul class="list-group" id="comm_append">
+
+
+          </ul>
+        </details>
+        <form id="comm_form">
+          <fieldset class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Add a comment">
+          </fieldset>
+          <button type="button" class="btn btn-sm btn-success" onclick='comm_post()'>Post</button>
+          <button type="button" class="btn btn-sm btn-secondary" onclick='comm_cancel()'>Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- Events you mya like................................................................................................................-->
+  <div style="width:100%;">
+
+    <div class="row">
+
+
+        <div class="col-md-12 well well-sm">
+          <h1 align='center'>Events you may like</h1>
+            <br/><br/>
+
+
+            <div id="eventrow" class="row">
+
+              <h2 id="ev_empty" style="color:red;">Empty</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  </div>
+
+  <!--Fotter section............................................................................................................... -->
+  <section id="contact">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="section-heading">Let's Get In Touch!</h2>
+          <hr class="primary">
+          <p>Ready to start your next Event with us? That's great! Send us an email and we will get back to you as soon as possible!</p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <i class="fa fa-android fa-3x sr-contact"></i>
+          <p>
+            <a href="https://play.google.com/store/apps/details?id=com.eventx.eventx" target="_blank"></i> Download Android app</a>
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+          <p><a href="mailto:EventX.team2017@gmail.com" target="_blank">EventX.team2017@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- jQuery....................................................................................... -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript...................................................................... -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript................................................................................. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Theme JavaScript.......................................................................................... -->
+  <script src="js/creative.min.js"></script>
+
+  <!--Firebase database...............................................................................................-->
+  <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+  <script type="text/javascript">
+    var config = {
+      apiKey: "AIzaSyAWv1atoxBXETvRJL_Oqd7YbimX-48cH0E",
+      authDomain: "eventx-77033.firebaseapp.com",
+      databaseURL: "https://eventx-77033.firebaseio.com",
+      storageBucket: "eventx-77033.appspot.com",
+      messagingSenderId: "503298611209"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!--Event.js file......................................................................................................................-->
+  <script src="js/Event.js"></script>
+
+
+
+</body>
+
+</html>

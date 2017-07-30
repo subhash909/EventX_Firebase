@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    $("#end").click(function(){
+      var str=$("#start").val();
+      //  alert(str);
+      $("#end").attr('min',str);
+    });
+    $("#start").click(function(){
+      var str=$("#end").val();
+      //  alert(str);
+      $("#start").attr('max',str);
+    });
+  });
+  </script>
+</head>
+<body>
+<form>
+    <input type="date" id="start" max=""/>
+    <input type="date" id="end" min="">
+</form>
+</body>
+</html>
